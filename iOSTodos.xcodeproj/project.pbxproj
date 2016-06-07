@@ -83,14 +83,7 @@
 		1E7634091A907BF6007477B5 /* iOSTodos */ = {
 			isa = PBXGroup;
 			children = (
-				1E76340C1A907BF6007477B5 /* AppDelegate.swift */,
-				1E76342F1A907D34007477B5 /* TodosViewController.swift */,
-				1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */,
-				1E9854A91A90963900D873B2 /* Todo.swift */,
-				1E7634131A907BF7007477B5 /* Main.storyboard */,
-				1E7634161A907BF7007477B5 /* Images.xcassets */,
-				1E7634181A907BF7007477B5 /* LaunchScreen.xib */,
-				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
+				5FF166D61D06640600A81283 /* Classes */,
 				1E76340A1A907BF6007477B5 /* Supporting Files */,
 			);
 			path = iOSTodos;
@@ -119,6 +112,45 @@
 				1E7634241A907BF7007477B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FF166D21D065ABA00A81283 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E7634131A907BF7007477B5 /* Main.storyboard */,
+				1E7634181A907BF7007477B5 /* LaunchScreen.xib */,
+				1E7634161A907BF7007477B5 /* Images.xcassets */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5FF166D41D06623800A81283 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E9854A91A90963900D873B2 /* Todo.swift */,
+				1E76340C1A907BF6007477B5 /* AppDelegate.swift */,
+				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5FF166D51D06624300A81283 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1E76342F1A907D34007477B5 /* TodosViewController.swift */,
+				1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5FF166D61D06640600A81283 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5FF166D41D06623800A81283 /* Models */,
+				5FF166D21D065ABA00A81283 /* Views */,
+				5FF166D51D06624300A81283 /* Controller */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +199,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = danimal141;
 				TargetAttributes = {
 					1E7634061A907BF5007477B5 = {
@@ -289,6 +321,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -380,6 +413,7 @@
 				);
 				INFOPLIST_FILE = iOSTodosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.danimal141.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTodos.app/iOSTodos";
 			};
@@ -395,6 +429,7 @@
 				);
 				INFOPLIST_FILE = iOSTodosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.danimal141.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTodos.app/iOSTodos";
 			};
