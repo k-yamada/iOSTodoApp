@@ -16,6 +16,10 @@
 		1E7634301A907D34007477B5 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76342F1A907D34007477B5 /* TodosViewController.swift */; };
 		1E7634341A9087F8007477B5 /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */; };
 		1E9854AA1A90963900D873B2 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9854A91A90963900D873B2 /* Todo.swift */; };
+		5FF166D91D066E7000A81283 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D71D066E7000A81283 /* Realm.framework */; };
+		5FF166DA1D066E7000A81283 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D71D066E7000A81283 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FF166DB1D066E7000A81283 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D81D066E7000A81283 /* RealmSwift.framework */; };
+		5FF166DC1D066E7000A81283 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D81D066E7000A81283 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,21 @@
 			remoteInfo = iOSTodos;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FF166DD1D066E7000A81283 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5FF166DC1D066E7000A81283 /* RealmSwift.framework in Embed Frameworks */,
+				5FF166DA1D066E7000A81283 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E7634071A907BF6007477B5 /* iOSTodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +61,8 @@
 		1E76342F1A907D34007477B5 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
 		1E9854A91A90963900D873B2 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		5FF166D71D066E7000A81283 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		5FF166D81D066E7000A81283 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF166DB1D066E7000A81283 /* RealmSwift.framework in Frameworks */,
+				5FF166D91D066E7000A81283 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,8 @@
 		1E7633FE1A907BF5007477B5 = {
 			isa = PBXGroup;
 			children = (
+				5FF166D71D066E7000A81283 /* Realm.framework */,
+				5FF166D81D066E7000A81283 /* RealmSwift.framework */,
 				1E7634091A907BF6007477B5 /* iOSTodos */,
 				1E7634221A907BF7007477B5 /* iOSTodosTests */,
 				1E7634081A907BF6007477B5 /* Products */,
@@ -147,8 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				5FF166D41D06623800A81283 /* Models */,
-				5FF166D21D065ABA00A81283 /* Views */,
 				5FF166D51D06624300A81283 /* Controller */,
+				5FF166D21D065ABA00A81283 /* Views */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -163,6 +188,7 @@
 				1E7634031A907BF5007477B5 /* Sources */,
 				1E7634041A907BF5007477B5 /* Frameworks */,
 				1E7634051A907BF5007477B5 /* Resources */,
+				5FF166DD1D066E7000A81283 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -383,6 +409,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSTodos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -393,6 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSTodos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

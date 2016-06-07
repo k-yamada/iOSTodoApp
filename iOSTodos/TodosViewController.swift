@@ -7,27 +7,32 @@
 //
 
 import UIKit
-import CoreData
+//import CoreData
 
-class TodosViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+//class TodosViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class TodosViewController: UITableViewController {
   
   var detailViewController: TodoDetailsViewController? = nil
   let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
-  lazy var fetchedResultController: NSFetchedResultsController = {
+    
+  //lazy var fetchedResultController: NSFetchedResultsController = {
+  lazy var fetchedResultController = {
     guard let managedObjectContext = self.managedObjectContext else { return NSFetchedResultsController() }
     let fetchedResultController = NSFetchedResultsController(fetchRequest: self.todoFetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
     fetchedResultController.delegate = self
     return fetchedResultController
-  }()
-
-  let todoFetchRequest: NSFetchRequest = {
+  //}()
+    }
+    
+    //let todoFetchRequest: NSFetchRequest = {
+  let todoFetchRequest = {
     let fetchRequest = NSFetchRequest(entityName: "Todo")
     let sortDescriptor = NSSortDescriptor(key: "content", ascending: true)
     fetchRequest.sortDescriptors = [sortDescriptor]
     return fetchRequest
-  }()
-
+  //}()
+  }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.leftBarButtonItem = self.editButtonItem()

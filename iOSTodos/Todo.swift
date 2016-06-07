@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import CoreData
+//import CoreData
 
-class Todo: NSManagedObject {
+//class Todo: NSManagedObject {
+class Todo {
   @NSManaged var content: String
     
   func validateContent(ioValue: AutoreleasingUnsafeMutablePointer<AnyObject?>) throws {
