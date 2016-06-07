@@ -7,9 +7,7 @@
 //
 
 import UIKit
-//import CoreData
-import RealmSwift
-
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

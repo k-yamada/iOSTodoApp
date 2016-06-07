@@ -16,10 +16,6 @@
 		1E7634301A907D34007477B5 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76342F1A907D34007477B5 /* TodosViewController.swift */; };
 		1E7634341A9087F8007477B5 /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */; };
 		1E9854AA1A90963900D873B2 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9854A91A90963900D873B2 /* Todo.swift */; };
-		5FF166D91D066E7000A81283 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D71D066E7000A81283 /* Realm.framework */; };
-		5FF166DA1D066E7000A81283 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D71D066E7000A81283 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5FF166DB1D066E7000A81283 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D81D066E7000A81283 /* RealmSwift.framework */; };
-		5FF166DC1D066E7000A81283 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF166D81D066E7000A81283 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5FF166DC1D066E7000A81283 /* RealmSwift.framework in Embed Frameworks */,
-				5FF166DA1D066E7000A81283 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,8 +55,6 @@
 		1E76342F1A907D34007477B5 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		1E7634331A9087F8007477B5 /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
 		1E9854A91A90963900D873B2 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		5FF166D71D066E7000A81283 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		5FF166D81D066E7000A81283 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF166DB1D066E7000A81283 /* RealmSwift.framework in Frameworks */,
-				5FF166D91D066E7000A81283 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +78,6 @@
 		1E7633FE1A907BF5007477B5 = {
 			isa = PBXGroup;
 			children = (
-				5FF166D71D066E7000A81283 /* Realm.framework */,
-				5FF166D81D066E7000A81283 /* RealmSwift.framework */,
 				1E7634091A907BF6007477B5 /* iOSTodos */,
 				1E7634221A907BF7007477B5 /* iOSTodosTests */,
 				1E7634081A907BF6007477B5 /* Products */,
@@ -117,6 +105,7 @@
 		1E76340A1A907BF6007477B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
 				1E76340B1A907BF6007477B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -154,7 +143,6 @@
 			children = (
 				1E9854A91A90963900D873B2 /* Todo.swift */,
 				1E76340C1A907BF6007477B5 /* AppDelegate.swift */,
-				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";

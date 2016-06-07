@@ -7,9 +7,7 @@
 //
 
 import UIKit
-//import CoreData
-import RealmSwift
-
+import CoreData
 
 class TodoDetailsViewController: UIViewController, UITextFieldDelegate {
     
