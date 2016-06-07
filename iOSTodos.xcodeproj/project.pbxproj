@@ -92,6 +92,7 @@
 		1E76340A1A907BF6007477B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
 				1E76340B1A907BF6007477B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -129,7 +130,6 @@
 			children = (
 				1E9854A91A90963900D873B2 /* Todo.swift */,
 				1E76340C1A907BF6007477B5 /* AppDelegate.swift */,
-				1E76340E1A907BF7007477B5 /* iOSTodos.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";

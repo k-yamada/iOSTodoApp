@@ -70,7 +70,7 @@ class TodosViewController: UITableViewController, NSFetchedResultsControllerDele
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     switch segue.identifier {
-      case .Some("Edit"):
+    case .Some("Edit"):
         guard let cell = sender as? UITableViewCell else { return }
         guard let indexPath = self.tableView.indexPathForCell(cell) else { return }
         let todo = self.fetchedResultController.objectAtIndexPath(indexPath) as? Todo
@@ -101,6 +101,7 @@ class TodosViewController: UITableViewController, NSFetchedResultsControllerDele
       managedObjectContext?.rollback()
     }
   }
+    
 
   var fetchedResultsController: NSFetchedResultsController {
     if _fetchedResultsController != nil {

@@ -9,12 +9,11 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-//import Foundation
-//import CoreData
+import Foundation
+import CoreData
 
-//extension Todo {
+extension Todo {
 
-//    @NSManaged var contents: String?
-//    @NSManaged var id: NSNumber?
+    @NSManaged var Todo: String?
 
-//}
+}

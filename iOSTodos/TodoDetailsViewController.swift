@@ -9,9 +9,12 @@
 import UIKit
 import CoreData
 
-class TodoDetailsViewController: UIViewController, UITextFieldDelegate {
+class TodoDetailsViewController: UITableViewController, UITextFieldDelegate, NSFetchedResultsControllerDelegate {
     
-  let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let ENTITY_NAME = "Memo"
+    let ITEM_NAME = "text"
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
   var todo: Todo?
 
   @IBOutlet weak var textField: UITextField!
@@ -65,6 +68,19 @@ class TodoDetailsViewController: UIViewController, UITextFieldDelegate {
       self.managedObjectContext?.rollback()
     }
   }
+     
+ /*  func saveTodo() {
+        /* Get ManagedObjectContext from AppDelegate */
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        /* Create new ManagedObject */
+        let entity = NSEntityDescription.entityForName("Todo", inManagedObjectContext: managedContext)
+        let personObject = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        /* Set the name attribute using key-value coding */
+        personObject.setValue(todo, forKey: "contents")
+     } */
     
   private func createTodo() {
     guard let managedObjectContext = self.managedObjectContext else { return }
@@ -83,3 +99,4 @@ class TodoDetailsViewController: UIViewController, UITextFieldDelegate {
   }
 
 }
+
