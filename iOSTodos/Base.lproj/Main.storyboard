@@ -32,13 +32,7 @@
                             <outlet property="delegate" destination="hQt-Dm-FQG" id="w8b-sj-Mdu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todos" id="4ep-gR-vy3">
-                        <barButtonItem key="rightBarButtonItem" title="＋" id="6xa-Bs-apq" userLabel="add">
-                            <connections>
-                                <segue destination="UTv-gE-KEh" kind="show" id="q0f-OO-mRG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Todos" id="4ep-gR-vy3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ME-Fe-1GY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +102,4 @@
             <point key="canvasLocation" x="755" y="45"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="q0f-OO-mRG"/>
-    </inferredMetricsTieBreakers>
 </document>
